@@ -1,0 +1,25 @@
+/* 홈 화면에 필요한 css */
+
+.box {
+    width: 90vw;
+    height: 80vh;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -45vw;
+    margin-top: -40vh;
+}
+.side-bar {
+    background-color: #232125;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    position:absolute;
+    top: 0px;
+    left:0px;
+}
+.list-bar {color: #323132;}
+.contents {
+    background-color:#37383d;
+}

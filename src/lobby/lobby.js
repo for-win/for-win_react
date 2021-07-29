@@ -6,8 +6,8 @@ function lobby() {
         <Container>
             <div className="box">
                 <div className="side-bar"></div>
-                {/* <div className="list-bar"></div> */}
-                {/* <div className="contents"></div> */}
+                <div className="list-bar"></div>
+                <div className="contents"></div>
             </div>
         </Container>
     );

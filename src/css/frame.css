@@ -1,4 +1,11 @@
-/* 홈 화면에 필요한 css */
+/* 로비 화면에 필요한 css */
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #282729;
+}
 
 .box {
     width: 90vw;
@@ -9,14 +16,7 @@
     margin-left: -45vw;
     margin-top: -40vh;
 }
-.list-bar {
-    background-color: #323132;
-    width: 95%;
-    height: 15%;
-    display: flex;
-    position:absolute;
-    left:5%;
-}
+
 .contents {
     background-color:#37383d;
     width: 95%;

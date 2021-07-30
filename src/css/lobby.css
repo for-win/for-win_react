@@ -9,15 +9,6 @@
     margin-left: -45vw;
     margin-top: -40vh;
 }
-.side-bar {
-    background-color: #232125;
-    width: 5%;
-    height: 100%;
-    display: flex;
-    position:absolute;
-    top: 0px;
-    left:0px;
-}
 .list-bar {
     background-color: #323132;
     width: 95%;

@@ -1,11 +1,12 @@
 import '../css/lobby.css';
 import styled from 'styled-components';
+import SideBar from './SideBar';
 
 function lobby() {
     return (
         <Container>
             <div className="box">
-                <div className="side-bar"></div>
+                <SideBar/>
                 <div className="list-bar"></div>
                 <div className="contents"></div>
             </div>

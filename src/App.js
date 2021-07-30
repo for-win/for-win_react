@@ -10,7 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <button className="App-link"><Link to="/home">
+        <button className="App-link"><Link to="/lobby">
           홈 화면 이동하기
         </Link></button>
       </header>

@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import home from './lobby/lobby';
+import lobby from './lobby/lobby';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <BrowserRouter>
     <Route exact path='/' component={App}/>
-    <Route path='/home' component={home}/>
+    <Route path='/lobby' component={lobby}/>
   </BrowserRouter>,
   document.getElementById('root')
 );

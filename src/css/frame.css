@@ -8,20 +8,11 @@
 }
 
 .box {
-    width: 90vw;
-    height: 70vh;
+    width: 800px;
+    height: 600px;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -45vw;
-    margin-top: -40vh;
-}
-
-.contents {
-    background-color:#37383d;
-    width: 95%;
-    height: 85%;
-    position: absolute;
-    top:15%;
-    left:5%;
+    margin-left: -400px;
+    margin-top: -300px;
 }

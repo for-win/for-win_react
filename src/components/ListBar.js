@@ -18,6 +18,6 @@ const ListDefault = styled.div`
     display: flex;
     position:absolute;
     left:5%;
-`
+`;
 
 export default ListBar;

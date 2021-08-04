@@ -23,6 +23,7 @@ const StyledSide = styled.div`
     position:absolute;
     top: 0px;
     left:0px;
+    transition: 850ms;
 `;
 
 const StyledBurger = styled.div`

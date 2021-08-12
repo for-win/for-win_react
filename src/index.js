@@ -4,12 +4,14 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import lobby from './apps/lobby';
+import Navbar from './test/Navbar';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <BrowserRouter>
     <Route exact path='/' component={App}/>
     <Route path='/lobby' component={lobby}/>
+    <Route path='/test' component={Navbar}/>
   </BrowserRouter>,
   document.getElementById('root')
 );

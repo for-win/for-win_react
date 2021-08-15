@@ -1,36 +1,31 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import '../css/sidebar.css'
 
 const SideBar = () => {
     const [open, setOpen] = useState(false);
+    const showSidebar = () => setOpen(!open);
     return (
-        <StyledSide>
-            <StyledBurger open={open} onClick={() => setOpen(!open)}>
-                <div/>
-                <div/>
-                <div/>
-            </StyledBurger>
-        </StyledSide>
+        <nav className={open ? 'side-bar active' : 'side-bar'}>
+            <Link to="#">
+                <StyledBurger open={open} onClick={showSidebar}>
+                    <div/>
+                    <div/>
+                    <div/>
+                </StyledBurger>
+            </Link>
+        </nav>
     );
     
 }
 
-const StyledSide = styled.div`
-    background-color: #232125;
-    width: 5%;
-    height: 100%;
-    display: flex;
-    position:absolute;
-    top: 0px;
-    left:0px;
-    transition: 850ms;
-`;
 
 const StyledBurger = styled.div`
-    width: 70%;
+    width: 30px;
     height: 5%;
     top: 5%;
-    left: 15%;
+    left: 5px;
     display: flex;
     position: absolute;
 

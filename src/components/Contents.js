@@ -18,6 +18,7 @@ const ContentsDefault = styled.div`
     position: absolute;
     top:15%;
     left:5%;
+    z-index: 1;
 `;
 
 export default Contents;

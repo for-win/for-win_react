@@ -1,0 +1,15 @@
+.side-bar {
+    background-color: #232125;
+    width: 5%;
+    height: 100%;
+    display: flex;
+    position:absolute;
+    top: 0px;
+    left:0px;
+    transition: 850ms;
+}
+.side-bar.active {
+    width: 20%;
+    transition: 350ms;
+    z-index: 2;
+}

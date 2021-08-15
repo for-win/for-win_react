@@ -14,9 +14,9 @@ class Contents extends React.Component {
 const ContentsDefault = styled.div`
     background-color:#37383d;
     width: 95%;
-    height: 85%;
+    height: 80%;
     position: absolute;
-    top:15%;
+    top:20%;
     left:5%;
     z-index: 1;
 `;

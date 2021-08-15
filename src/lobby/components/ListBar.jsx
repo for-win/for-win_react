@@ -14,7 +14,7 @@ class ListBar extends React.Component {
 const ListDefault = styled.div`
     background-color: #323132;
     width: 95%;
-    height: 15%;
+    height: 20%;
     display: flex;
     position:absolute;
     left:5%;

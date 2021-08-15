@@ -22,16 +22,16 @@ const SideBar = () => {
 
 
 const StyledBurger = styled.div`
-    width: 30px;
+    width: 25px;
     height: 5%;
-    top: 5%;
-    left: 5px;
+    top: 3%;
+    left: 7.5px;
     display: flex;
     position: absolute;
 
     div:nth-child(1) {
         width: 95%;
-        height: 10%;
+        height: 5%;
         left: 2.5%;
         background-color: white;
         border-radius: 10px;
@@ -40,21 +40,21 @@ const StyledBurger = styled.div`
     }
     div:nth-child(2) {
         width: 95%;
-        height: 10%;
+        height: 5%;
         left: 2.5%;
         background-color: white;
         border-radius: 10px;
         position: absolute;
-        top: 45%;
+        top: 50%;
     }
     div:nth-child(3) {
         width: 95%;
-        height: 10%;
+        height: 5%;
         left: 2.5%;
         background-color: white;
         border-radius: 10px;
         position: absolute;
-        top: 60%;
+        top: 70%;
     }
 `;
 

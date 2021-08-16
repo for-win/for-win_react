@@ -100,17 +100,17 @@ const SideBarSpan = styled.span`
 const ItemData = [
     {
         title: '리그오브레전드',
-        path: '#',
+        path: '/lobby/leagueoflegends',
         icon: <img className="side-bar-icon" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/ko-kr/production/ko-kr/static/favicon-0cf29ce019f7cd1e7b24f85ab6ff97da.ico"/>
     },
     {
         title: '배틀그라운드',
-        path: '#',
+        path: '/lobby/battleground',
         icon: <img className="side-bar-icon" src="//t1.kakaocdn.net/gamepub/pub/battlegrounds/favicon.ico"/>
     },
     {
         title: '오버워치',
-        path: '#',
+        path: '/lobby/overwatch',
         icon: <img className="side-bar-icon" src="https://static.playoverwatch.com/img/favicon-696bc07714.ico"/>
     }
 ];

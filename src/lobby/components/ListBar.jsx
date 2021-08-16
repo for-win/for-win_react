@@ -25,7 +25,6 @@ const ListDefault = styled.div`
 
 const MenuBar = styled.ul`
     list-style: none;
-    height: 50%;
     a {
         text-decoration: none;
     }
@@ -43,7 +42,7 @@ const MenuData = [
     },
     {
         title: '친구',
-        path: '#'
+        path: '/friend'
     }
 ];
 
@@ -51,13 +50,12 @@ const MenuData = [
 const MenuComponent =
     MenuData.map((item, index)=>{
         return (
-            
-                <li key={index} className='list-bar-arrange'>
-                    <span className='list-bar-menu-item'>
-                        <Link to={item.path}>{index===1 ?
-                            <b>{item.title}</b> : item.title}</Link>
-                    </span>
-                </li>
+            <li key={index} className='list-bar-arrange'>
+                <span className='list-bar-menu-item'>
+                    <Link to={item.path}>{index===1 ?
+                        <b>{item.title}</b> : item.title}</Link>
+                </span>
+            </li>
             
         );
     })

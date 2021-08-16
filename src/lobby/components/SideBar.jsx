@@ -22,8 +22,8 @@ const SideBar = () => {
                     return (
                         <Link to={item.path}>
                             <li key={index} className='side-bar-item'>
-                                {open ? <span>{item.icon}{item.title}</span> : 
-                                <span>{item.icon}</span>}
+                                {open ? <SideBarSpan>{item.icon}{item.title}</SideBarSpan> : 
+                                <SideBarSpan>{item.icon}</SideBarSpan>}
                             </li>
                         </Link>
                     )
@@ -31,9 +31,9 @@ const SideBar = () => {
             </SideBarItems>
             
             <Link to="#" className='icon-setting'>
-                {open ? <span><AiTwotoneSetting className='side-bar-icon'/>설정</span> 
+                {open ? <SideBarSpan><AiTwotoneSetting className='side-bar-icon'/>설정</SideBarSpan> 
                 : 
-                <span><AiTwotoneSetting className='side-bar-icon'/></span>}
+                <SideBarSpan><AiTwotoneSetting className='side-bar-icon'/></SideBarSpan>}
             </Link>
         </nav>
     );
@@ -42,10 +42,10 @@ const SideBar = () => {
 
 // styles
 const StyledBurger = styled.div`
-    width: 25px;
-    height: 5%;
-    top: 3%;
-    left: 7.5px;
+    width: 20px;
+    height: 20px;
+    top: 20px;
+    left: 10px;
     display: flex;
     position: absolute;
 
@@ -56,7 +56,7 @@ const StyledBurger = styled.div`
         background-color: white;
         border-radius: 10px;
         position: absolute;
-        top: 30%;
+        top: 20%;
     }
     div:nth-child(2) {
         width: 95%;
@@ -74,17 +74,27 @@ const StyledBurger = styled.div`
         background-color: white;
         border-radius: 10px;
         position: absolute;
-        top: 70%;
+        top: 80%;
     }
 `;
 
 const SideBarItems = styled.ul`
     width: 100%;
     margin-top: 100px;
+    list-style: none;
     a {
         text-decoration: none;
     }
 `;
+
+const SideBarSpan = styled.span`
+    color: #f5f5f5;
+    font-size: 12px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+`
 
 // list: sidebar-item
 const ItemData = [

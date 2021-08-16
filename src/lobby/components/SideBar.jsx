@@ -15,12 +15,25 @@ const SideBar = () => {
                     <div/>
                 </StyledBurger>
             </Link>
+            
+            <SideBarItems>
+                {ItemData.map((item, index) => {
+                    return (
+                        <Link to={item.path}>
+                            <li key={index} className='side-bar-item'>
+                                {open ? <span>{item.icon}{item.title}</span> : 
+                                <span>{item.icon}</span>}
+                            </li>
+                        </Link>
+                    )
+                })}
+            </SideBarItems>
         </nav>
     );
     
 }
 
-
+// styles
 const StyledBurger = styled.div`
     width: 25px;
     height: 5%;
@@ -57,5 +70,32 @@ const StyledBurger = styled.div`
         top: 70%;
     }
 `;
+
+const SideBarItems = styled.ul`
+    width: 100%;
+    margin-top: 100px;
+    a {
+        text-decoration: none;
+    }
+`;
+
+// list: sidebar-item
+const ItemData = [
+    {
+        title: '리그오브레전드',
+        path: '#',
+        icon: <img className="side-bar-icon" src="https://lolstatic-a.akamaihd.net/frontpage/apps/prod/harbinger-l10-website/ko-kr/production/ko-kr/static/favicon-0cf29ce019f7cd1e7b24f85ab6ff97da.ico"/>
+    },
+    {
+        title: '배틀그라운드',
+        path: '#',
+        icon: <img className="side-bar-icon" src="//t1.kakaocdn.net/gamepub/pub/battlegrounds/favicon.ico"/>
+    },
+    {
+        title: '오버워치',
+        path: '#',
+        icon: <img className="side-bar-icon" src="https://static.playoverwatch.com/img/favicon-696bc07714.ico"/>
+    }
+];
 
 export default SideBar;

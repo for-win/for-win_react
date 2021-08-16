@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { AiTwotoneSetting } from "react-icons/ai";
 import '../css/sidebar.css'
 
 const SideBar = () => {
@@ -28,6 +29,12 @@ const SideBar = () => {
                     )
                 })}
             </SideBarItems>
+            
+            <Link to="#" className='icon-setting'>
+                {open ? <span><AiTwotoneSetting className='side-bar-icon'/>설정</span> 
+                : 
+                <span><AiTwotoneSetting className='side-bar-icon'/></span>}
+            </Link>
         </nav>
     );
     

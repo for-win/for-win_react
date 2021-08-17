@@ -1,4 +1,4 @@
-import './css/frame.css';
+import '../templates/frame.css';
 import SideBar from './components/SideBar';
 import ListBar from './components/ListBar';
 import Contents from './components/Contents';

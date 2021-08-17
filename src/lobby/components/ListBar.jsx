@@ -1,13 +1,16 @@
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import '../css/listbar.css'
 
 const ListBar = () => {
     return (
         <ListDefault>
-            <MenuBar>
+            <ListUl>
                 {MenuComponent}
-            </MenuBar>
+            </ListUl>
+            <ListUl>
+                
+            </ListUl>
         </ListDefault>
     );
 }
@@ -23,10 +26,11 @@ const ListDefault = styled.div`
     z-index: 1;
 `;
 
-const MenuBar = styled.ul`
+const ListUl = styled.ul`
     list-style: none;
-    a {
+    a { // MenuBar의 자식요소 중 Link의 style
         text-decoration: none;
+        color: #f5f5f5;
     }
 `;
 
@@ -46,12 +50,14 @@ const MenuData = [
     }
 ];
 
+// list: filter
+
 // component: menu
 const MenuComponent =
     MenuData.map((item, index)=>{
         return (
             <li key={index} className='list-bar-arrange'>
-                <span className='list-bar-menu-item'>
+                <span className='list-bar-item'>
                     <Link to={item.path}>{index===1 ?
                         <b>{item.title}</b> : item.title}</Link>
                 </span>
@@ -60,5 +66,8 @@ const MenuComponent =
         );
     })
 ;
+
+// component: filter
+
 
 export default ListBar;

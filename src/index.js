@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import App from './App';
-import lobby from './lobby/lobby'
+import lobby from './app/lobby/lobby'
 import Navbar from './test/Navbar';
 
 import reportWebVitals from './reportWebVitals';

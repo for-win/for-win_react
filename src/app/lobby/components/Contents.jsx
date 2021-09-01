@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import RoomList from '../api/room';
 
-class Contents extends React.Component {
-    render() {
-        return(
-            <ContentsDefault>
-
-            </ContentsDefault>
-        );
-    }
+function Contents (props) {
+    return(
+        <ContentsDefault>
+            <RoomList gameType={props.gametype}/>
+        </ContentsDefault>
+    );
 }
 
 const ContentsDefault = styled.div`

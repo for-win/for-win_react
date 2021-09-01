@@ -12,6 +12,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Route exact path='/' component={App}/>
     <Route path='/lobby' component={lobby}/>
+    <Route path='/lobby/:gametype' component={lobby}/>
     <Route path='/home' component={Navbar}/>
   </BrowserRouter>,
   document.getElementById('root')

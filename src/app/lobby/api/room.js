@@ -1,30 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from 'axios';
 const config = require('../../config');
 
 function RoomList(props) {
     const [rooms, setRooms] = useState(null);
     const [error, setError] = useState(null);
-    const [url, setUrl] = useState('http://'+config.IP+':'+config.PORT+'/room/');
+    const [config, setConfig] = useState('null');
+    const url = '/room/'+props.gameType;
 
-    useEffect(()=> {
-        const fetchRooms = async () => {
+    const fetchRooms = useCallback(
+        async () => {
+            const res = await axios({
+                method: 'GET',
+                url: url,
+            });
             try {
-                setError(null);
-                setRooms(null);
-                setUrl(url+props.gameType);
-                const response = await axios.get(url);
-                setRooms(response.data);
+                setRooms(res.data);
+                setConfig(res.config);
             } catch (e) {
                 console.log(e);
                 setError(e);
             }
-        };
+        },
+        [url],
+    );
 
+    useEffect(()=> {
         fetchRooms();
-    }, [rooms, url]);
+    }, [fetchRooms]);
     if (error) return <div><a href={url}>{error.message}</a></div>;
-    if (!rooms) return null;
+    if (!rooms) return <div>{config}</div>;
 
     return (
         <tables>

@@ -11,7 +11,7 @@ function lobby({match}) {
                 <div className="box">
                     <SideBar/>
                     <ListBar/>
-                    <Contents gametype={match.params.gametype}>
+                    <Contents gameType={match.params.gametype}>
                     </Contents>
                 </div>
             </IconContext.Provider>

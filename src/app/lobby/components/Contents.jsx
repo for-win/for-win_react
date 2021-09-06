@@ -5,7 +5,7 @@ import RoomList from '../api/room';
 function Contents (props) {
     return(
         <ContentsDefault>
-            <RoomList gameType={props.gametype}/>
+            <RoomList gameType={props.gameType}/>
         </ContentsDefault>
     );
 }

@@ -1,18 +1,17 @@
 import React, { useState, useEffect, useCallback } from "react";
 import axios from 'axios';
-const config = require('../../config');
 
 function RoomList(props) {
     const [rooms, setRooms] = useState(null);
     const [error, setError] = useState(null);
     const [config, setConfig] = useState('null');
-    const url = '/room/'+props.gameType;
 
     const fetchRooms = useCallback(
         async () => {
             const res = await axios({
                 method: 'GET',
-                url: url,
+                url: '/room/leagueoflegends',
+                baseURL: 'http://3.37.245.109:3000/'
             });
             try {
                 setRooms(res.data);
@@ -22,14 +21,14 @@ function RoomList(props) {
                 setError(e);
             }
         },
-        [url],
+        [],
     );
 
     useEffect(()=> {
         fetchRooms();
     }, [fetchRooms]);
-    if (error) return <div><a href={url}>{error.message}</a></div>;
-    if (!rooms) return <div>{config}</div>;
+    if (error) return <div>{error.message}</div>;
+    if (!rooms) return <div>{rooms}</div>;
 
     return (
         <tables>

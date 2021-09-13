@@ -1,21 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
-import axios from 'axios';
 
 function RoomList(props) {
     const [rooms, setRooms] = useState(null);
     const [error, setError] = useState(null);
-    const [config, setConfig] = useState('null');
 
     const fetchRooms = useCallback(
         async () => {
-            const res = await axios({
-                method: 'GET',
-                url: '/room/leagueoflegends',
-                baseURL: 'http://3.37.245.109:3000/'
-            });
+            const res = await fetch('http://3.37.245.109:3000/room/leagueoflegends');
             try {
                 setRooms(res.data);
-                setConfig(res.config);
             } catch (e) {
                 console.log(e);
                 setError(e);

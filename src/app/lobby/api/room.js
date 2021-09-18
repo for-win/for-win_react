@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import fetch from 'fetch-with-proxy';
+import axios from 'axios';
 
 function RoomList(props) {
     const [rooms, setRooms] = useState([]);
@@ -7,34 +7,28 @@ function RoomList(props) {
     const [status, setStatus] = useState('');
 
     const fetchRooms = useCallback(
-        () => {
-            fetch('http://3.37.245.109:3000/room/leagueoflegends')
-            .then(res => {
-                setStatus(res.status);
-                return res.text()})
-            .then(
-                (result) => {
-                    setRooms(result);
-                    console.log(result);
-                },
-                (error) => {
-                    setError(error);
-                }
-            )
-        },
-        [],
+        async () => {
+            try {
+                const body =  await axios.get('http://localhost:3000/room/leagueoflegends');
+                setRooms(body.data.data);
+                setStatus(body.data.status);
+            } catch(error) {
+                console.error(error);
+                setError(error);
+            }
+        }, [],
     );
 
     useEffect(()=> {
         fetchRooms();
     }, []);
-    if (error) return <div>{rooms}</div>;
+    if (error) return <div>{error.status}</div>;
     if (!rooms) return <div>nodata</div>;
 
     return (
         <tables>
-            <div>{rooms}</div>
-            {/* {rooms.data.map(room => (
+            <div>{status}</div>
+            {rooms.map(room => (
                 <tr>
                     <td>{room.secret}</td>
                     <td>{room.code}</td>
@@ -42,7 +36,7 @@ function RoomList(props) {
                     <td>{room.type}</td>
                     <td>{room.user.name}</td>
                 </tr>
-            ))} */}
+            ))}
         </tables>
     );
 }
